@@ -1,0 +1,128 @@
+:root {
+  color-scheme: light;
+  --blue: #006699;
+  --blue-dark: #064c70;
+  --ink: #182a33;
+  --muted: #455d69;
+  --line: #ccdce4;
+  --tint: #edf5f9;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+a { color: var(--blue-dark); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+p { margin: 0 0 1.1rem; }
+h1, h2, h3 { line-height: 1.12; }
+h2 { margin: 0 0 1.25rem; font-size: clamp(1.55rem, 3vw, 2rem); letter-spacing: -.035em; }
+h3 { margin: 0 0 .75rem; font-size: 1.15rem; }
+.wrap { width: min(100% - 3rem, 66rem); margin-inline: auto; }
+.skip-link { position: absolute; top: -6rem; left: 1rem; z-index: 10; padding: .8rem 1rem; background: #fff; }
+.skip-link:focus { top: .75rem; }
+.site-header { border-top: 6px solid var(--blue); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding-block: 1.25rem; }
+.site-name { font-size: 1rem; font-weight: 700; text-decoration: none; color: var(--ink); line-height: 1.25; }
+.site-name span { display: block; color: var(--blue); }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; }
+nav a { min-height: 44px; display: inline-flex; align-items: center; font-size: .9375rem; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.hero-image { width: 100%; max-width: 1600px; aspect-ratio: 14 / 5; margin-inline: auto; overflow: hidden; background: var(--tint); }
+.hero-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; }
+.intro { padding-block: 3rem 3.5rem; }
+.event-date { color: var(--blue-dark); font-size: 1.125rem; font-weight: 700; }
+h1 { margin: .8rem 0 1.2rem; font-size: clamp(2.8rem, 7.5vw, 5.7rem); line-height: .97; letter-spacing: -.06em; }
+.event-place { font-size: 1.25rem; color: var(--muted); }
+.event-summary { margin-top: 2rem; padding-left: 1.25rem; border-left: 4px solid var(--blue); }
+.event-summary p { margin-bottom: .15rem; }
+.photo-gallery { display: grid; grid-template-columns: minmax(0, 1.3333fr) minmax(0, .75fr) minmax(0, 1.1843fr) minmax(0, 1.1623fr); gap: .75rem; margin-top: 2rem; overflow-x: auto; scrollbar-width: thin; }
+.photo-gallery img { display: block; width: 100%; height: auto; }
+.photo-gallery:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+.camping-notice { margin-top: 2rem; padding: 1.25rem 1.5rem; border-left: 4px solid var(--blue); background: var(--tint); }
+.camping-notice h2 { margin-bottom: .5rem; font-size: 1.35rem; letter-spacing: -.02em; }
+.camping-notice p { margin: 0; }
+.camping-notice a { font-weight: 700; white-space: nowrap; }
+.details-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 4rem; align-items: start; padding-bottom: 4rem; }
+.section-label { color: var(--blue-dark); font-size: .875rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; margin-bottom: .75rem; }
+.section-divider { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.text-link { display: inline-block; font-weight: 700; padding-block: .35rem; }
+.visitor-note { margin-top: 1.25rem; color: var(--muted); }
+.race-info { padding: 2rem; background: var(--tint); border-top: 4px solid var(--blue); }
+.fees { margin: 0; }
+.fees div { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: .75rem; border-bottom: 1px solid var(--line); }
+.fees dt { line-height: 1.45; }
+.fees dd { margin: 0; font-size: 1.6rem; font-weight: 700; line-height: 1; white-space: nowrap; letter-spacing: -.04em; }
+.membership-note { color: var(--muted); font-size: .9375rem; margin-top: .85rem; }
+.info-section { margin-top: 1.8rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.info-section p:last-child { margin-bottom: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.schedule-section { border-top: 1px solid var(--line); padding-block: 3rem 4rem; }
+.schedule-table { width: 100%; margin-top: 2rem; border-collapse: collapse; line-height: 1.5; }
+.schedule-table th, .schedule-table td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.schedule-table thead { background: var(--blue-dark); color: #fff; }
+.schedule-table th:first-child { width: 8rem; white-space: nowrap; }
+.schedule-table th:last-child { width: 6.5rem; }
+.schedule-table th[scope="row"] { font-size: 1rem; color: var(--blue-dark); }
+.schedule-table .duration { white-space: nowrap; }
+.schedule-break { background: var(--tint); }
+.schedule-note { display: block; margin-top: .25rem; color: var(--muted); font-size: .9375rem; }
+.sponsors { border-top: 1px solid var(--line); padding-block: 3rem 3.5rem; }
+.sponsors h2 { font-size: 1.65rem; }
+.sponsor-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 2.5rem 0 0; padding: 0; gap: 3rem; }
+.sponsor-list li { display: flex; align-items: center; justify-content: center; min-height: 148px; }
+.sponsor-list a { display: block; max-width: 100%; }
+.sponsor-list img { display: block; max-width: 100%; height: auto; max-height: 148px; object-fit: contain; }
+.site-footer { background: var(--blue-dark); color: #fff; padding-block: 1.5rem; }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .35rem 1rem; font-size: .875rem; }
+.footer-inner p { margin: 0; }
+.footer-inner p:first-child { font-weight: 700; }
+
+@media (max-width: 48rem) {
+  .photo-gallery { display: flex; padding-bottom: .5rem; scroll-snap-type: x proximity; }
+  .photo-gallery img { flex: 0 0 auto; width: auto; height: 11rem; scroll-snap-align: start; }
+  .details-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .race-info { grid-row: 1; }
+  .hero-image { aspect-ratio: 2 / 1; }
+  .intro { padding-block: 2.25rem 2.5rem; }
+  .header-inner { gap: 1rem; flex-wrap: wrap; }
+  .sponsor-list { gap: 1.5rem; }
+}
+@media (max-width: 30rem) {
+  .wrap { width: min(100% - 2rem, 66rem); }
+  nav { gap: .25rem 1.15rem; }
+  .header-inner { padding-block: 1rem .65rem; }
+  .site-name span { display: inline; }
+  .race-info { padding: 1.4rem; }
+  .sponsor-list { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .sponsor-list li { min-height: 0; }
+  .sponsor-list img { max-width: min(100%, 300px); }
+}
+@media (max-width: 40rem) {
+  .schedule-table, .schedule-table tbody { display: block; }
+  .schedule-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .schedule-table tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 1rem; gap: .5rem 1rem; border-bottom: 1px solid var(--line); }
+  .schedule-table th, .schedule-table td { display: block; width: auto; padding: 0; border: 0; }
+  .schedule-table th[scope="row"] { grid-column: 1; grid-row: 1; width: auto; }
+  .schedule-table td:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+  .schedule-table .duration { grid-column: 2; grid-row: 1; color: var(--muted); }
+}
+@media print {
+  .site-header, .skip-link, nav { display: none; }
+  .intro { padding-block: 1rem; }
+  h1 { font-size: 2.8rem; }
+  .wrap { width: 100%; }
+  .details-grid { display: block; }
+  .race-info { background: none; padding: 1rem 0; }
+  section, .race-info { break-inside: avoid; }
+  .schedule-section { break-inside: auto; }
+  .schedule-table tr { break-inside: avoid; }
+  .site-footer { color: var(--ink); background: none; }
+}
