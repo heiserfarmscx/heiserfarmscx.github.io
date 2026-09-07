@@ -30,8 +30,8 @@ h3 { margin: 0 0 .75rem; font-size: 1.15rem; }
 .skip-link:focus { top: .75rem; }
 .site-header { border-top: 6px solid var(--blue); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding-block: 1.25rem; }
-.site-name { font-size: 1rem; font-weight: 700; text-decoration: none; color: var(--ink); line-height: 1.25; }
-.site-name span { display: block; color: var(--blue); }
+.site-name { font-size: 1rem; font-weight: 700; text-decoration: none; color: var(--ink); line-height: 1.25; white-space: nowrap; }
+.site-name span { color: var(--blue); }
 nav { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; }
 nav a { min-height: 44px; display: inline-flex; align-items: center; font-size: .9375rem; text-decoration: none; }
 nav a:hover { text-decoration: underline; }
@@ -39,10 +39,14 @@ nav a:hover { text-decoration: underline; }
 .hero-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; }
 .intro { padding-block: 3rem 3.5rem; }
 .event-date { color: var(--blue-dark); font-size: 1.125rem; font-weight: 700; }
-h1 { margin: .8rem 0 1.2rem; font-size: clamp(2.8rem, 7.5vw, 5.7rem); line-height: .97; letter-spacing: -.06em; }
+h1 { margin: .8rem 0 1.2rem; font-size: clamp(1.5rem, 7.5vw, 5.7rem); line-height: .97; letter-spacing: -.06em; }
 .event-place { font-size: 1.25rem; color: var(--muted); }
 .event-summary { margin-top: 2rem; padding-left: 1.25rem; border-left: 4px solid var(--blue); }
 .event-summary p { margin-bottom: .15rem; }
+.intro-actions { margin-top: 1.5rem; }
+.register-button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 48px; max-width: 100%; padding: .8rem 1.4rem; border: 2px solid var(--blue); border-radius: .3rem; background: var(--blue); color: #fff; font-weight: 700; line-height: 1.4; text-align: center; text-decoration: none; }
+.register-button:hover { border-color: var(--blue-dark); background: var(--blue-dark); }
+.start-lists-link { display: inline-block; padding-block: .35rem; font-size: .9375rem; }
 .photo-gallery { display: grid; grid-template-columns: minmax(0, 1.3333fr) minmax(0, .75fr) minmax(0, 1.1843fr) minmax(0, 1.1623fr); gap: .75rem; margin-top: 2rem; overflow-x: auto; scrollbar-width: thin; }
 .photo-gallery img { display: block; width: 100%; height: auto; }
 .photo-gallery:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
@@ -99,7 +103,6 @@ h1 { margin: .8rem 0 1.2rem; font-size: clamp(2.8rem, 7.5vw, 5.7rem); line-heigh
   .wrap { width: min(100% - 2rem, 66rem); }
   nav { gap: .25rem 1.15rem; }
   .header-inner { padding-block: 1rem .65rem; }
-  .site-name span { display: inline; }
   .race-info { padding: 1.4rem; }
   .sponsor-list { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
   .sponsor-list li { min-height: 0; }
